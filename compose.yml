@@ -20,7 +20,7 @@ services:
     client:
         build: client
         environment:
-            - VITE_BACKEND_HOST=backend
+            - VITE_BACKEND_HOST=http://backend
             - VITE_BACKEND_PORT=3001
         ports:
             - "5173:5173"
