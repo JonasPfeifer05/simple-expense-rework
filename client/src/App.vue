@@ -5,8 +5,6 @@ useColorStore().apply();
 </script>
 
 <template>
-    <main>
-        <RouterView/>
-    </main>
+    <RouterView/>
 </template>
 
