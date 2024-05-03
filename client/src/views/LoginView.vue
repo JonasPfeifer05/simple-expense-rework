@@ -26,7 +26,7 @@ async function isCorrectPassword(): Promise<boolean> {
         const response = await fetch("/api/ping");
         return await response.text() == "pong";
     } catch (ignored) {
-        console.log(ignored);
+        console.log("error:", ignored);
         return false;
     }
 }

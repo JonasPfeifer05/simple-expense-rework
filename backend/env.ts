@@ -27,5 +27,5 @@ const env = load({
     },
 })
 
-console.log(env)
+console.log("env:", env)
 export default env;
