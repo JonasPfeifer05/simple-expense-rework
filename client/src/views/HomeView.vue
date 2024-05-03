@@ -130,7 +130,7 @@ function clearModal() {
     flex-direction: column;
     justify-content: end;
 
-    height: 100vh;
+    height: 100dvh;
     width: 100vw;
 
     #sheet {
@@ -197,7 +197,7 @@ function clearModal() {
 }
 
 #container {
-    height: 100vh;
+    height: 100dvh;
 }
 
 #app-bar {

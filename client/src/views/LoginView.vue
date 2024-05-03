@@ -46,7 +46,7 @@ async function isCorrectPassword(): Promise<boolean> {
 #authorization-container {
     #password-form {
         position: absolute;
-        top: 50vh;
+        top: 50dvh;
         left: 50vw;
         translate: -50% -50%;
 
