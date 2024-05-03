@@ -308,7 +308,7 @@ function clearModal() {
 
         #add-button, #analytics-button {
             height: 45px;
-            aspect-ratio: 1;
+            width: 45px;
 
             border: none;
             border-radius: 40%;
