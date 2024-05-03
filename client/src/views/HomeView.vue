@@ -306,6 +306,9 @@ function clearModal() {
         display: flex;
         justify-content: center;
 
+        height: 100%;
+        aspect-ratio: 1;
+
         #add-button, #analytics-button {
             height: 100%;
             aspect-ratio: 1;
