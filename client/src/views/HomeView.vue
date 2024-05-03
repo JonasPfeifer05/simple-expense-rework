@@ -314,8 +314,8 @@ function clearModal() {
             border-radius: 40%;
 
             #add-icon, #analytics-icon {
-                height: 50%;
-                width: 50%;
+                height: 65%;
+                width: 65%;
 
                 cursor: pointer;
 
