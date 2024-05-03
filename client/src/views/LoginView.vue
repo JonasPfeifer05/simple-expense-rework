@@ -42,66 +42,64 @@ async function isCorrectPassword(): Promise<boolean> {
     </div>
 </template>
 
-<style scoped>
-#password-form {
-    position: absolute;
-    top: 50vh;
-    left: 50vw;
-    translate: -50% -50%;
+<style scoped lang="scss">
+#authorization-container {
+    #password-form {
+        position: absolute;
+        top: 50vh;
+        left: 50vw;
+        translate: -50% -50%;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
 
-    width: 300px;
-    height: 200px;
+        width: 300px;
+        height: 200px;
 
-    padding: 16px;
-    box-sizing: border-box;
+        padding: 16px;
+        box-sizing: border-box;
 
-    background: var(--surface-mixed-200);
-
-    border-radius: 8px;
-
-    h1 {
-        margin: 0 !important;
-    }
-
-    & > input, select, button {
-        height: 45px;
-        width: 100%;
+        background: var(--surface-mixed-200);
 
         border-radius: 8px;
 
-        background: var(--surface-mixed-300);
+        h1 {
+            margin: 0 !important;
+        }
 
-        color: var(--color);
+        & > input, select, button {
+            height: 45px;
+            width: 100%;
 
-        outline: none;
+            border-radius: 8px;
 
-        border: var(--surface-mixed-300) 1px solid;
+            background: var(--surface-mixed-300);
 
-        appearance: none;
-        -moz-appearance: none;
-        -webkit-appearance: none;
+            color: var(--color);
 
-        padding: 0 8px;
-        box-sizing: border-box;
-        font-size: 16px;
+            outline: none;
+
+            border: var(--surface-mixed-300) 1px solid;
+
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+
+            padding: 0 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button {
+            background: var(--primary-100);
+        }
+
+        & > *:focus {
+            outline: none;
+            border: var(--primary-300) 1px solid;
+        }
     }
-
-    button {
-        background: var(--primary-100);
-    }
-
-    & > *:focus {
-        outline: none;
-        border: var(--primary-300) 1px solid;
-    }
-}
-
-#authorization-container {
-
 }
 </style>
