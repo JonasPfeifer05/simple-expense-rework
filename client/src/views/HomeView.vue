@@ -206,14 +206,14 @@ function clearModal() {
     align-items: center;
 
     font-size: 25px;
-    height: 75px;
+    height: 65px;
 }
 
 #content {
     display: flex;
     flex-direction: column;
 
-    height: calc(100% - 75px - 75px);
+    height: calc(100% - 65px - 65px);
 
     #balance {
         display: flex;
@@ -294,7 +294,7 @@ function clearModal() {
 #bottom-bar {
     display: flex;
     align-items: center;
-    height: 75px;
+    height: 65px;
     background: var(--surface-mixed-200);
 
     & > * {
@@ -306,7 +306,7 @@ function clearModal() {
         display: flex;
         justify-content: center;
 
-        height: 100%;
+        height: 75%;
         aspect-ratio: 1;
 
         #add-button, #analytics-button {
