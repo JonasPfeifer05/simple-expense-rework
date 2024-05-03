@@ -23,11 +23,11 @@ export const useEntryStore = defineStore("entry", {
         async addEntry(entry: EntryData) {
             await fetch("/api/entry", {
                 method: "POST",
-                body: {
+                body: JSON.stringify({
                     topic_id: entry.topic.id,
                     subtopic_id: entry.subTopic.id,
                     amount: entry.amount,
-                } as any
+                })
             })
             this.entries = [entry, ...this.entries];
         }
