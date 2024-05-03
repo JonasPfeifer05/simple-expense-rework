@@ -20,20 +20,5 @@ services:
     simple-expense-client:
         build: client
         ports:
-            - "5432:5432"
-        depends_on:
-            db:
-                condition: service_healthy
-        links:
-            - simple-expense-backend:backend
-
-    simple-expense-backend:
-        build: backend
-        ports:
-            - "3001:3001"
-        depends_on:
-            db:
-                condition: service_healthy
-        links:
-            - db:database
+            - "8080:8080"
 
