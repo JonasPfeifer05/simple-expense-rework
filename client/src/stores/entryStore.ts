@@ -21,7 +21,12 @@ export const useEntryStore = defineStore("entry", {
             this.entries = await (await fetch("/api/entry", {method: "GET"})).json();
         },
         async addEntry(entry: EntryData) {
+            console.log(entry)
             await fetch("/api/entry", {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
                 method: "POST",
                 body: JSON.stringify({
                     topic_id: entry.topic.id,

@@ -1,6 +1,6 @@
 import express from "express";
 import db from "../../db.ts";
-import type {EntryData, Topic} from "../../../client/types/entryData.ts"
+import type {EntryData, Topic} from "../../../client/src/types/entryData.ts"
 import type {EntryDTO} from "../../types/entryDTO.ts";
 import type {EntryDBO} from "../../types/entryDBO.ts";
 
@@ -41,7 +41,9 @@ router.get("/", async (req, res) => {
 })
 
 router.post("/", async (req, res) => {
+    console.log(req.body)
     const data = req.body as EntryDTO;
+
     await db.query(`
         INSERT INTO entry(topic_id, subtopic_id, amount)
         VALUES ($1, $2, $3)
