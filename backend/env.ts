@@ -1,6 +1,6 @@
 import {load} from "ts-dotenv";
 
-export default load({
+const env = load({
     PORT: {
         type: Number,
         optional: true,
@@ -26,3 +26,6 @@ export default load({
         optional: true,
     },
 })
+
+console.log(env)
+export default env;

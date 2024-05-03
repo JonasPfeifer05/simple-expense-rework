@@ -3,7 +3,7 @@ services:
     db:
         image: postgres:14-alpine
         ports:
-            - 5432:5432
+            - "5432:5432"
         volumes:
             - ./data:/data
             - ./init.sql:/docker-entrypoint-initdb.d/init.sql
@@ -19,10 +19,13 @@ services:
 
     client:
         build: client
+        environment:
+            - BACKEND_HOST=backend
+            - BACKEND_PORT=3001
         ports:
             - "8080:8080"
         links:
-            - db:database
+            - backend:backend
 
     backend:
         build: backend
