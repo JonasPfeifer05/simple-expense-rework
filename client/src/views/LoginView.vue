@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {inject, nextTick, onMounted, ref} from "vue";
+import {nextTick, onMounted, ref} from "vue";
 import { useCookies } from "vue3-cookies"
 import {useRouter} from "vue-router";
 import {sha256} from "js-sha256";
