@@ -22,15 +22,11 @@ services:
         environment:
             - VITE_BACKEND_HOST=http://backend
             - VITE_BACKEND_PORT=3001
-        ports:
-            - "5173:5173"
         links:
             - backend
 
     backend:
         build: backend
-        ports:
-            - "3001:3001"
         environment:
             - DB_PORT=5432
             - DB_HOST=database
@@ -42,3 +38,13 @@ services:
                 condition: service_healthy
         links:
             - db:database
+
+    proxy:
+        image: nginx:latest
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./nginx.conf:/etc/nginx/conf.d/default.conf
+        links:
+            - backend
+            - client
