@@ -10,7 +10,6 @@ import router from './router'
 
 globalCookiesConfig({
     expireTimes: "30d",
-    secure: true,
 });
 
 const app = createApp(App)
