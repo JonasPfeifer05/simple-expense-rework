@@ -28,6 +28,12 @@ services:
         build: backend
         ports:
             - "3001:3001"
+        environment:
+            - DB_PORT=5432
+            - DB_HOST=database
+            - DB_USER=admin
+            - DB_PASSWORD=admin
+            - DB_DATABASE=simpleexpense
         depends_on:
             db:
                 condition: service_healthy
