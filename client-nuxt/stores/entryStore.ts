@@ -11,20 +11,18 @@ export const useEntryStore = defineStore("entry", {
     }),
     getters: {
         balance: (state) => {
-            let sum = 0;
-            for (let entry of state.entries) {
-                sum += entry.amount;
-            }
-            return sum;
+            return state.entries.reduce((sum, entry) => {
+                return sum + entry.amount
+            }, 0);
         }
     },
     actions: {
         async fetchEntries() {
-            this.entries = await (await fetch("/api/entry", {method: "GET"})).json();
+            this.entries = await $fetch<EntryData[]>("/api/entry", {method: "GET"});
         },
         async addEntry(entry: EntryData) {
             console.log(entry)
-            await fetch("/api/entry", {
+            await $fetch("/api/entry", {
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
