@@ -1,11 +1,11 @@
-FROM oven/bun:latest
+FROM node:latest
 
 COPY . .
 
-RUN bun i
-RUN bun run build
+RUN npm i
+RUN npm run build
 
 ENV HOST 0.0.0.0
-EXPOSE 3000
+EXPOSE 8080
 
-CMD ["bun", ".output/server/index.mjs"]
+CMD ["npm", "run", "start"]

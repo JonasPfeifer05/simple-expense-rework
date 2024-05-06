@@ -18,29 +18,15 @@ services:
             retries: 5
 
     client:
-        build: client
-        ports:
-            - "8080:8080"
-        environment:
-            - VITE_BACKEND_HOST=http://backend
-            - VITE_BACKEND_PORT=3001
-        links:
-            - backend
-
-    nuxt-client:
         build: client-nuxt
-        ports:
-            - "4000:3000"
         environment:
-            - VITE_BACKEND_HOST=http://backend
-            - VITE_BACKEND_PORT=3001
+            - BACKEND_HOST=http://backend
+            - BACKEND_PORT=3001
         links:
             - backend
 
     backend:
         build: backend
-        ports:
-            -   "3001:3001"
         environment:
             - DB_PORT=5432
             - DB_HOST=database
